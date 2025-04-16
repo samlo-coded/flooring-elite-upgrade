@@ -13,7 +13,7 @@ const Services = () => {
     },
     {
       title: 'Domestic Flooring',
-      description: 'Beautiful, comfortable flooring options to enhance your home's aesthetics and value.',
+      description: 'Beautiful, comfortable flooring options to enhance your home\'s aesthetics and value.',
       image: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
       link: '/services/domestic'
     },

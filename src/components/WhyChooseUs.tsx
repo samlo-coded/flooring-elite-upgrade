@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
     {
       icon: <Recycle className="w-10 h-10 mb-4 text-brand-blue" />,
       title: 'Sustainable Practices',
-      description: 'We're committed to environmentally responsible practices and sustainable flooring options.'
+      description: 'We\'re committed to environmentally responsible practices and sustainable flooring options.'
     },
     {
       icon: <Tool className="w-10 h-10 mb-4 text-brand-blue" />,

@@ -22,7 +22,7 @@ const Testimonials = () => {
       name: 'Michael Williams',
       company: 'Residential Client',
       role: 'Homeowner',
-      text: 'We couldn't be happier with our new wooden floors. The craftsmanship is outstanding and the team was professional, clean, and respectful of our home throughout the installation.',
+      text: 'We couldn\'t be happier with our new wooden floors. The craftsmanship is outstanding and the team was professional, clean, and respectful of our home throughout the installation.',
       rating: 5
     }
   ];
