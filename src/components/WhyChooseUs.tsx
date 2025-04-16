@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CheckSquare, Clock, Award, ThumbsUp, Recycle, Tool } from 'lucide-react';
+import { CheckSquare, Clock, Award, ThumbsUp, Recycle, Wrench } from 'lucide-react';
 
 const WhyChooseUs = () => {
   const reasons = [
@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
       description: 'We\'re committed to environmentally responsible practices and sustainable flooring options.'
     },
     {
-      icon: <Tool className="w-10 h-10 mb-4 text-brand-blue" />,
+      icon: <Wrench className="w-10 h-10 mb-4 text-brand-blue" />,
       title: 'Comprehensive Services',
       description: 'From consultation to installation and aftercare, we provide end-to-end flooring solutions.'
     }
