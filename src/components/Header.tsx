@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, Phone, Mail, Facebook, Instagram, Twitter, Linkedin, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -46,18 +45,11 @@ const Header = () => {
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <div className="flex flex-col items-center mr-2">
-                <div className="flex">
-                  <div className="w-4 h-4 bg-brand-lightblue" />
-                  <div className="w-4 h-4 bg-brand-blue ml-1" />
-                </div>
-                <div className="w-8 h-4 bg-brand-navy mt-1" />
-              </div>
-              <div className="ml-2">
-                <span className="font-heading font-bold text-xl text-brand-navy">Midlands</span>
-                <span className="font-heading font-bold text-xl text-brand-blue"> Flooring</span>
-                <span className="font-heading text-sm text-brand-navy ml-1">Ltd</span>
-              </div>
+              <img 
+                src="/lovable-uploads/b32260d9-1bf0-4958-9536-f9ff16d1ad4b.png" 
+                alt="Midlands Flooring Ltd Logo" 
+                className="h-10 mr-2" 
+              />
             </Link>
           </div>
           

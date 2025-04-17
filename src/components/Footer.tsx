@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PhoneCall, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
@@ -11,13 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="flex flex-col items-center mr-2">
-                <div className="flex">
-                  <div className="w-4 h-4 bg-brand-lightblue" />
-                  <div className="w-4 h-4 bg-brand-blue ml-1" />
-                </div>
-                <div className="w-8 h-4 bg-white mt-1" />
-              </div>
+              <img 
+                src="/lovable-uploads/b32260d9-1bf0-4958-9536-f9ff16d1ad4b.png" 
+                alt="Midlands Flooring Ltd Logo" 
+                className="h-10 mr-2" 
+              />
               <div className="ml-2">
                 <span className="font-heading font-bold text-xl text-white">Midlands</span>
                 <span className="font-heading font-bold text-xl text-brand-lightblue"> Flooring</span>
