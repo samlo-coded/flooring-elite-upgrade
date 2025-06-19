@@ -16,7 +16,7 @@ const Hero = () => {
           Premium Flooring Solutions for <span className="text-brand-lightblue">Every Space</span>
         </h1>
         <p className="text-lg md:text-xl text-center md:text-left mb-8 max-w-2xl">
-          Our team delivers durable, stylish flooring installations with zero compromise on quality or turnaround time.
+          Our team delivers durable, stylish flooring installations with zero compromise on quality or turnaround time. Whether it’s a high-traffic commercial environment or a bespoke residential project, we provide expert solutions tailored to your space, schedule, and standards.
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <Button className="btn-primary text-lg" asChild>
