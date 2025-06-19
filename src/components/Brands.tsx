@@ -1,5 +1,12 @@
 
 import React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Brands = () => {
   const brands = [
@@ -33,7 +40,9 @@ const Brands = () => {
     <section className="py-10 md:py-16 bg-brand-gray">
       <div className="container-custom">
         <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Delivered in World-Class Spaces</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {brands.map((brand) => (
             <div key={brand.name} className="flex items-center justify-center h-16 md:h-20 w-full">
               <img
@@ -43,6 +52,33 @@ const Brands = () => {
               />
             </div>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {brands.map((brand) => (
+                <CarouselItem key={brand.name} className="basis-1/2">
+                  <div className="flex items-center justify-center h-16 w-full p-2">
+                    <img
+                      src={brand.logo}
+                      alt={`${brand.name} logo`}
+                      className="max-h-full max-w-full object-contain opacity-75"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </div>
       </div>
     </section>
