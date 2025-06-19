@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Menu, Phone, Mail, Facebook, Instagram, Twitter, Linkedin, X } from 'lucide-react';
+import { Menu, Phone, Mail, Facebook, Instagram, Linkedin, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -30,8 +31,8 @@ const Header = () => {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Instagram size={18} className="hover:text-brand-lightblue transition-colors" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter size={18} className="hover:text-brand-lightblue transition-colors" />
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <X size={18} className="hover:text-brand-lightblue transition-colors" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin size={18} className="hover:text-brand-lightblue transition-colors" />

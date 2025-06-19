@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PhoneCall, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { PhoneCall, Mail, MapPin, Facebook, Instagram, Linkedin, X } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -31,8 +32,8 @@ const Footer = () => {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-brand-blue p-2 rounded-full hover:bg-brand-lightblue transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-brand-blue p-2 rounded-full hover:bg-brand-lightblue transition-colors">
-                <Twitter size={18} />
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="bg-brand-blue p-2 rounded-full hover:bg-brand-lightblue transition-colors">
+                <X size={18} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-brand-blue p-2 rounded-full hover:bg-brand-lightblue transition-colors">
                 <Linkedin size={18} />

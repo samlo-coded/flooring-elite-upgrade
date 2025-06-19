@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +8,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import ProjectsShowcase from '@/components/ProjectsShowcase';
 import Testimonials from '@/components/Testimonials';
 import QuoteSection from '@/components/QuoteSection';
+import Suppliers from '@/components/Suppliers';
 
 const Index = () => {
   return (
@@ -17,6 +17,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Brands />
+        <Suppliers />
         <Services />
         <WhyChooseUs />
         <ProjectsShowcase />
