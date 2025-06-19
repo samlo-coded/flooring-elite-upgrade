@@ -14,8 +14,8 @@ const Brands = () => {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png'
     },
     {
-      name: 'Mini Cooper',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/MINI_logo.svg/2560px-MINI_logo.svg.png'
+      name: 'Jaguar Land Rover',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Jaguar_Land_Rover_logo.svg/2560px-Jaguar_Land_Rover_logo.svg.png'
     },
     {
       name: 'Mercedes',
@@ -31,7 +31,7 @@ const Brands = () => {
     },
     {
       name: 'Walkers',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Walkers_Crisps_2015.svg/1200px-Walkers_Crisps_2015.svg.png'
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Walkers_logo.svg/1200px-Walkers_logo.svg.png'
     },
   ];
 
