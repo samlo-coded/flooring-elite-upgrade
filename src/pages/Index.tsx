@@ -7,7 +7,7 @@ import Brands from '@/components/Brands';
 import Services from '@/components/Services';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ProjectsShowcase from '@/components/ProjectsShowcase';
-import GoogleRating from '@/components/GoogleRating';
+import Testimonials from '@/components/Testimonials';
 import QuoteSection from '@/components/QuoteSection';
 
 const Index = () => {
@@ -20,7 +20,7 @@ const Index = () => {
         <Services />
         <WhyChooseUs />
         <ProjectsShowcase />
-        <GoogleRating />
+        <Testimonials />
         <QuoteSection />
       </main>
       <Footer />

@@ -4,8 +4,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const Brands = () => {
@@ -32,7 +30,7 @@ const Brands = () => {
     },
     {
       name: 'Walkers',
-      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Walkers_Crisps_2015.svg/1200px-Walkers_Crisps_2015.svg.png'
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Walkers_Crisps_2015.svg/1200px-Walkers_Crisps_2015.svg.png'
     },
   ];
 
@@ -41,45 +39,27 @@ const Brands = () => {
       <div className="container-custom">
         <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Delivered in World-Class Spaces</h2>
         
-        {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-          {brands.map((brand) => (
-            <div key={brand.name} className="flex items-center justify-center h-16 md:h-20 w-full">
-              <img
-                src={brand.logo}
-                alt={`${brand.name} logo`}
-                className="max-h-full max-w-full object-contain opacity-75 hover:opacity-100 transition-opacity"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent>
-              {brands.map((brand) => (
-                <CarouselItem key={brand.name} className="basis-1/2">
-                  <div className="flex items-center justify-center h-16 w-full p-2">
-                    <img
-                      src={brand.logo}
-                      alt={`${brand.name} logo`}
-                      className="max-h-full max-w-full object-contain opacity-75"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
-          </Carousel>
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {brands.map((brand) => (
+              <CarouselItem key={brand.name} className="basis-1/2 md:basis-1/3 lg:basis-1/6">
+                <div className="flex items-center justify-center h-16 md:h-20 w-full p-2">
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="max-h-full max-w-full object-contain opacity-75 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
