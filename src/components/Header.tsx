@@ -39,20 +39,20 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Main Nav */}
       <div className="bg-white py-4 shadow-sm">
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/b32260d9-1bf0-4958-9536-f9ff16d1ad4b.png" 
-                alt="Midlands Flooring Ltd Logo" 
-                className="h-10 mr-2" 
+              <img
+                src="/lovable-uploads/b32260d9-1bf0-4958-9536-f9ff16d1ad4b.png"
+                alt="Midlands Flooring Ltd Logo"
+                className="h-10 mr-2"
               />
             </Link>
           </div>
-          
+
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Home</Link>
             <Link to="/services" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Services</Link>
@@ -60,17 +60,17 @@ const Header = () => {
             <Link to="/about" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">About Us</Link>
             <Link to="/contact" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Contact</Link>
           </nav>
-          
+
           <div className="hidden md:block">
             <Button className="btn-primary">Get a Quote</Button>
           </div>
-          
+
           <button className="md:hidden text-brand-navy" onClick={toggleMenu} aria-label="Menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg py-4 absolute w-full z-50">
