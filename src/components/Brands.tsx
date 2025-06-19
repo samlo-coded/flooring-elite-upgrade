@@ -5,6 +5,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Brands = () => {
   const brands = [
@@ -34,17 +35,25 @@ const Brands = () => {
     },
   ];
 
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
   return (
     <section className="py-10 md:py-16 bg-brand-gray">
       <div className="container-custom">
         <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Delivered in World-Class Spaces</h2>
         
         <Carousel
+          plugins={[autoplayPlugin.current]}
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
           }}
           className="w-full"
+          onMouseEnter={() => autoplayPlugin.current.stop()}
+          onMouseLeave={() => autoplayPlugin.current.play()}
         >
           <CarouselContent>
             {brands.map((brand) => (
@@ -53,7 +62,7 @@ const Brands = () => {
                   <img
                     src={brand.logo}
                     alt={`${brand.name} logo`}
-                    className="max-h-full max-w-full object-contain opacity-75 hover:opacity-100 transition-opacity"
+                    className="max-h-full max-w-full object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   />
                 </div>
               </CarouselItem>
