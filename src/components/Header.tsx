@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, Phone, Mail } from 'lucide-react';
+import { Menu, Phone, Mail, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 

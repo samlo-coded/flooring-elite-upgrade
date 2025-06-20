@@ -1,75 +1,81 @@
 
 import React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { Card, CardContent } from '@/components/ui/card';
 
 const Brands = () => {
   const brands = [
-    {
-      name: 'BMW',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png'
-    },
-    {
-      name: 'Jaguar Land Rover',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Jaguar_Land_Rover_logo.svg/2560px-Jaguar_Land_Rover_logo.svg.png'
-    },
-    {
-      name: 'Mercedes',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2048px-Mercedes-Logo.svg.png'
-    },
-    {
-      name: 'Apple',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png'
-    },
-    {
-      name: 'Dominos Pizza',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/1200px-Domino%27s_pizza_logo.svg.png'
-    },
-    {
-      name: 'Walkers',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Walkers_logo.svg/1200px-Walkers_logo.svg.png'
-    },
+    { name: 'Jaguar Land Rover', logo: 'https://logos-world.net/wp-content/uploads/2021/08/Jaguar-Land-Rover-Logo.png' },
+    { name: 'Walkers', logo: 'https://logos-world.net/wp-content/uploads/2020/12/Walkers-Logo.png' },
+    { name: 'Tesco', logo: 'https://logos-world.net/wp-content/uploads/2020/09/Tesco-Logo.png' },
+    { name: 'ASDA', logo: 'https://logos-world.net/wp-content/uploads/2020/09/ASDA-Logo.png' },
+    { name: 'Marks & Spencer', logo: 'https://logos-world.net/wp-content/uploads/2020/08/Marks-Spencer-Logo.png' },
+    { name: 'John Lewis', logo: 'https://logos-world.net/wp-content/uploads/2020/11/John-Lewis-Logo.png' }
   ];
 
-  const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
-
   return (
-    <section className="py-10 md:py-16 bg-brand-gray">
+    <section className="py-16 bg-white">
       <div className="container-custom">
-        <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Delivered in World-Class Spaces</h2>
-        
-        <Carousel
-          plugins={[autoplayPlugin.current]}
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-          }}
-          className="w-full"
-          onMouseEnter={() => autoplayPlugin.current.stop()}
-          onMouseLeave={() => autoplayPlugin.current.play()}
-        >
-          <CarouselContent>
-            {brands.map((brand) => (
-              <CarouselItem key={brand.name} className="basis-1/2 md:basis-1/3 lg:basis-1/6">
-                <div className="flex items-center justify-center h-16 md:h-20 w-full p-2">
-                  <img
-                    src={brand.logo}
-                    alt={`${brand.name} logo`}
-                    className="max-h-full max-w-full object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  />
-                </div>
-              </CarouselItem>
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+            Trusted by Leading Brands
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            We're proud to work with some of the UK's most prestigious companies, delivering exceptional flooring solutions that meet their exact requirements.
+          </p>
+        </div>
+
+        <div className="overflow-hidden">
+          <div className="flex animate-scroll space-x-8">
+            {/* First set of brands */}
+            {brands.map((brand, index) => (
+              <div key={`first-${index}`} className="flex-shrink-0">
+                <Card className="w-48 h-32 flex items-center justify-center bg-white border-2 border-gray-100 hover:border-brand-blue transition-all duration-300 hover:shadow-lg">
+                  <CardContent className="p-6">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
+            {/* Duplicate set for seamless scrolling */}
+            {brands.map((brand, index) => (
+              <div key={`second-${index}`} className="flex-shrink-0">
+                <Card className="w-48 h-32 flex items-center justify-center bg-white border-2 border-gray-100 hover:border-brand-blue transition-all duration-300 hover:shadow-lg">
+                  <CardContent className="p-6">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 30s linear infinite;
+        }
+        
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };

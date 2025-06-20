@@ -1,73 +1,81 @@
 
 import React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { Card, CardContent } from '@/components/ui/card';
 
 const Suppliers = () => {
   const suppliers = [
-    {
-      name: 'Karndean',
-      logo: 'https://www.karndean.com/media/wysiwyg/Karndean_Logo_2021_Pantone_Coated.jpg'
-    },
-    {
-      name: 'Amtico',
-      logo: 'https://www.amtico.com/wp-content/uploads/2019/06/amtico-logo.png'
-    },
-    {
-      name: 'Polyflor',
-      logo: 'https://www.polyflor.com/wp-content/uploads/2019/03/polyflor-logo-2019.png'
-    },
-    {
-      name: 'Altro',
-      logo: 'https://www.altro.com/sites/default/files/altro-logo.svg'
-    },
-    {
-      name: 'Tarkett',
-      logo: 'https://www.tarkett.com/sites/default/files/tarkett-logo.svg'
-    },
-    {
-      name: 'Interface',
-      logo: 'https://www.interface.com/US/en-US/homepage/Interface-Logo-svg'
-    },
+    { name: 'Tarkett', logo: 'https://logos-world.net/wp-content/uploads/2023/01/Tarkett-Logo.png' },
+    { name: 'Forbo', logo: 'https://www.forbo.com/eurocol/media/img_logos/forbo_logo.png' },
+    { name: 'Interface', logo: 'https://logos-world.net/wp-content/uploads/2022/04/Interface-Logo.png' },
+    { name: 'Polyflor', logo: 'https://www.polyflor.com/images/polyflor-logo.png' },
+    { name: 'Karndean', logo: 'https://www.karndean.com/assets/img/logo.png' },
+    { name: 'Amtico', logo: 'https://www.amtico.com/assets/img/logo-amtico.png' }
   ];
 
-  const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  );
-
   return (
-    <section className="py-10 md:py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="container-custom">
-        <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Supplied by Industry Leaders</h2>
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+            Premium Flooring Suppliers
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            We partner with the world's leading flooring manufacturers to bring you the highest quality products and latest innovations in flooring technology.
+          </p>
+        </div>
 
-        <Carousel
-          plugins={[autoplayPlugin.current]}
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
-            {suppliers.map((supplier) => (
-              <CarouselItem key={supplier.name} className="basis-1/2 md:basis-1/3 lg:basis-1/6">
-                <div className="flex items-center justify-center h-16 md:h-20 w-full p-2">
-                  <img
-                    src={supplier.logo}
-                    alt={`${supplier.name} logo`}
-                    className="max-h-full max-w-full object-contain grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  />
-                </div>
-              </CarouselItem>
+        <div className="overflow-hidden">
+          <div className="flex animate-scroll-reverse space-x-8">
+            {/* First set of suppliers */}
+            {suppliers.map((supplier, index) => (
+              <div key={`first-${index}`} className="flex-shrink-0">
+                <Card className="w-48 h-32 flex items-center justify-center bg-white border-2 border-gray-100 hover:border-brand-blue transition-all duration-300 hover:shadow-lg">
+                  <CardContent className="p-6">
+                    <img
+                      src={supplier.logo}
+                      alt={supplier.name}
+                      className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
+            {/* Duplicate set for seamless scrolling */}
+            {suppliers.map((supplier, index) => (
+              <div key={`second-${index}`} className="flex-shrink-0">
+                <Card className="w-48 h-32 flex items-center justify-center bg-white border-2 border-gray-100 hover:border-brand-blue transition-all duration-300 hover:shadow-lg">
+                  <CardContent className="p-6">
+                    <img
+                      src={supplier.logo}
+                      alt={supplier.name}
+                      className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll-reverse {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        
+        .animate-scroll-reverse {
+          animation: scroll-reverse 35s linear infinite;
+        }
+        
+        .animate-scroll-reverse:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };
