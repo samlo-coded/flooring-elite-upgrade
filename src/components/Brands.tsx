@@ -17,11 +17,8 @@ const Brands = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-            Trusted by Leading Brands
+            Delivered in World-Class Spaces
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We're proud to work with some of the UK's most prestigious companies, delivering exceptional flooring solutions that meet their exact requirements.
-          </p>
         </div>
 
         <div className="overflow-hidden">
@@ -67,11 +64,11 @@ const Brands = () => {
             transform: translateX(-50%);
           }
         }
-        
+
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
-        
+
         .animate-scroll:hover {
           animation-play-state: paused;
         }

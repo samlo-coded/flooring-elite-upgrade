@@ -17,11 +17,8 @@ const Suppliers = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-            Premium Flooring Suppliers
+            Supplied by Industry Leaders
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We partner with the world's leading flooring manufacturers to bring you the highest quality products and latest innovations in flooring technology.
-          </p>
         </div>
 
         <div className="overflow-hidden">
@@ -67,11 +64,11 @@ const Suppliers = () => {
             transform: translateX(0);
           }
         }
-        
+
         .animate-scroll-reverse {
           animation: scroll-reverse 35s linear infinite;
         }
-        
+
         .animate-scroll-reverse:hover {
           animation-play-state: paused;
         }
