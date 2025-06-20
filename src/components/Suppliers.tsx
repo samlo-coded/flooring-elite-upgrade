@@ -42,8 +42,8 @@ const Suppliers = () => {
   return (
     <section className="py-10 md:py-16 bg-white">
       <div className="container-custom">
-        <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Our Trusted Suppliers</h2>
-        
+        <h2 className="text-center text-brand-navy font-heading font-bold text-3xl mb-8">Supplied by Industry Leaders</h2>
+
         <Carousel
           plugins={[autoplayPlugin.current]}
           opts={{

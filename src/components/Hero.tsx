@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="relative bg-brand-navy text-white overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80')] bg-cover bg-center opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/p/AF1QipO2cZcc1iPhCktrQxITss6cYCEZW367EdFpj040=s1360-w1360-h1020-rw')] bg-cover bg-center opacity-20"></div>
 
       {/* Content */}
       <div className="relative container-custom py-20 md:py-32 flex flex-col items-center md:items-start">

@@ -45,11 +45,16 @@ const Header = () => {
       <div className="bg-white py-4 shadow-sm">
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center relative group">
               <img
                 src="/lovable-uploads/b32260d9-1bf0-4958-9536-f9ff16d1ad4b.png"
-                alt="Midlands Flooring Ltd Logo"
-                className="h-10 mr-2"
+                alt="Normal Logo"
+                className="h-10 mr-2 transition-all duration-500 ease-in-out group-hover:opacity-0"
+              />
+              <img
+                src="/public/Logo-Reveresed-Colours.png"
+                alt="Hover Logo"
+                className="absolute h-10 mr-2 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100"
               />
             </Link>
           </div>
