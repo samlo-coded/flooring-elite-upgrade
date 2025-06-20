@@ -70,13 +70,15 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Home</Link>
             <Link to="/services" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Services</Link>
-            <Link to="/projects" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Projects</Link>
+            <Link to="/case-studies" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Case Studies</Link>
             <Link to="/about" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">About Us</Link>
             <Link to="/contact" className="font-medium text-brand-navy hover:text-brand-blue transition-colors">Contact</Link>
           </nav>
 
           <div className="hidden md:block">
-            <Button className="btn-primary">Get a Quote</Button>
+            <Button className="btn-primary" asChild>
+              <Link to="/quote">Get a Quote</Link>
+            </Button>
           </div>
 
           <button className="md:hidden text-brand-navy" onClick={toggleMenu} aria-label="Menu">
@@ -91,10 +93,12 @@ const Header = () => {
           <div className="container-custom flex flex-col space-y-4">
             <Link to="/" className="font-medium text-brand-navy hover:text-brand-blue transition-colors py-2 border-b border-gray-100">Home</Link>
             <Link to="/services" className="font-medium text-brand-navy hover:text-brand-blue transition-colors py-2 border-b border-gray-100">Services</Link>
-            <Link to="/projects" className="font-medium text-brand-navy hover:text-brand-blue transition-colors py-2 border-b border-gray-100">Projects</Link>
+            <Link to="/case-studies" className="font-medium text-brand-navy hover:text-brand-blue transition-colors py-2 border-b border-gray-100">Case Studies</Link>
             <Link to="/about" className="font-medium text-brand-navy hover:text-brand-blue transition-colors py-2 border-b border-gray-100">About Us</Link>
             <Link to="/contact" className="font-medium text-brand-navy hover:text-brand-blue transition-colors py-2 border-b border-gray-100">Contact</Link>
-            <Button className="btn-primary w-full mt-4">Get a Quote</Button>
+            <Button className="btn-primary w-full mt-4" asChild>
+              <Link to="/quote">Get a Quote</Link>
+            </Button>
           </div>
         </div>
       )}
