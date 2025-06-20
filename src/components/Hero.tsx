@@ -25,7 +25,7 @@ const Hero = () => {
             </Link>
           </Button>
           <Button className="bg-white text-brand-navy hover:bg-gray-100 text-lg" asChild>
-            <Link to="/projects">View Our Projects</Link>
+            <Link to="/case-studies">View Our Case Studies</Link>
           </Button>
         </div>
       </div>

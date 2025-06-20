@@ -46,17 +46,17 @@ const ProjectsShowcase = () => {
             <Link to="/case-studies">View All Case Studies</Link>
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {caseStudies.map((caseStudy, index) => (
-            <Link 
-              key={index} 
-              to="/case-studies" 
+            <Link
+              key={index}
+              to="/case-studies"
               className="group relative h-64 md:h-80 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
-              <img 
-                src={caseStudy.image} 
-                alt={caseStudy.title} 
+              <img
+                src={caseStudy.image}
+                alt={caseStudy.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -66,14 +66,6 @@ const ProjectsShowcase = () => {
               </div>
             </Link>
           ))}
-        </div>
-        
-        <div className="mt-10 text-center">
-          <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white" asChild>
-            <Link to="/case-studies" className="flex items-center">
-              See More Case Studies <ArrowRight size={16} className="ml-2" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
