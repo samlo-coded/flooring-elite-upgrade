@@ -58,7 +58,7 @@ const Suppliers = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes scroll-reverse {
           0% {
             transform: translateX(-50%);
